@@ -8,6 +8,11 @@
 <meta name="robots" content="index,follow">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
+  /* FİLTRE BUNA BAĞLI. Kartlar `.k{display:block}` taşıdığı için tarayıcının
+     kendi `[hidden]{display:none}` kuralı eziliyordu: "Staj"a basıldığında
+     JS kartları hidden yapıyor ama hepsi ekranda kalıyordu. Yazar kuralı
+     tarayıcı kuralını her zaman yener; bu yüzden gizleme burada tanımlanmalı. */
+  [hidden]{display:none!important}
   :root{--mur:#0D1421;--mur2:#161F30;--amb:#FFB703;--bey:#F4F2ED;--gri:#8495B2;--kir:#E44242}
   body{background:var(--mur);color:var(--bey);
        font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
@@ -49,7 +54,7 @@
     <div class="marka">ADA <span>KARİYER</span></div>
     <h1>Paylaştığım açık başvurular</h1>
     <p class="alt">En son paylaştığım en üstte. Süresi dolan otomatik düşer.</p>
-    <div class="say"><b>9</b> açık başvuru · 03.08.2026 güncel</div>
+    <div class="say"><b id="say">13</b> açık başvuru · 03.08.2026 güncel</div>
   </header>
 
   <nav id="f">
@@ -58,6 +63,38 @@
   </nav>
 
   <main id="l">
+      <a class="k" href="https://www.youthall.com/en/Henkel/step-up-program_27/" target="_blank" rel="noopener"
+         data-tur="staj">
+        <div class="ust"><span class="e">Staj</span><span class="r">Tarih açıklanmadı</span></div>
+        <h2>Step Up Program</h2>
+        <p class="ku">Henkel</p>
+        
+        <span class="git">Başvuru sayfası →</span>
+      </a>
+      <a class="k" href="https://www.youthall.com/tr/Commencis/spring-boot-development-camp-2026_48/" target="_blank" rel="noopener"
+         data-tur="staj">
+        <div class="ust"><span class="e">Staj</span><span class="r">Son 11 gün</span></div>
+        <h2>Spring Boot Development Camp 2026</h2>
+        <p class="ku">Commencis</p>
+        
+        <span class="git">Başvuru sayfası →</span>
+      </a>
+      <a class="k" href="https://www.iskur.gov.tr/is-arayan/aktif-isgucu-programlari/iskur-genclik-programi" target="_blank" rel="noopener"
+         data-tur="staj">
+        <div class="ust"><span class="e">Staj</span><span class="r">Tarih açıklanmadı</span></div>
+        <h2>İŞKUR Gençlik Programı</h2>
+        <p class="ku">Türkiye İş Kurumu (İŞKUR)</p>
+        <p class="t">1.375 TL (günlük cep harçlığı, 2026 yılı için)</p>
+        <span class="git">Başvuru sayfası →</span>
+      </a>
+      <a class="k" href="https://www.havelsan.com/tr/hit-staj-programi" target="_blank" rel="noopener"
+         data-tur="staj">
+        <div class="ust"><span class="e">Staj</span><span class="r">Tarih açıklanmadı</span></div>
+        <h2>HİT Yaz Staj Programı</h2>
+        <p class="ku">HAVELSAN</p>
+        
+        <span class="git">Başvuru sayfası →</span>
+      </a>
       <a class="k" href="https://microfon.co/scholarship" target="_blank" rel="noopener"
          data-tur="burs">
         <div class="ust"><span class="e">Burs</span><span class="r acil">Son 1 gün</span></div>
@@ -140,7 +177,8 @@
   </footer>
 </div>
 <script>
-  const f=document.getElementById('f'),l=document.getElementById('l'),bos=document.getElementById('bos');
+  const f=document.getElementById('f'),l=document.getElementById('l'),
+        bos=document.getElementById('bos'),say=document.getElementById('say');
   f.addEventListener('click',e=>{
     const b=e.target.closest('button'); if(!b) return;
     [...f.children].forEach(x=>x.classList.toggle('on',x===b));
@@ -149,6 +187,7 @@
       const g=!t||k.dataset.tur===t; k.hidden=!g; if(g)n++;
     });
     bos.hidden=n>0;
+    say.textContent=n;          // sayaç seçili kategoriyi göstersin
   });
 </script>
 </body>
