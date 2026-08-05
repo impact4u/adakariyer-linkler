@@ -233,5 +233,10 @@
     "canli": true,
     "hata_sayisi": 0,
     "kontrol_at": "2026-08-05T16:41:09.833258+00:00"
+  },
+  "https://www.btkakademi.gov.tr/": {
+    "canli": true,
+    "hata_sayisi": 0,
+    "kontrol_at": "2026-08-05T17:30:51.850354+00:00"
   }
 }
