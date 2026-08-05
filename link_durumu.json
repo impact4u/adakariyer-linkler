@@ -228,5 +228,10 @@
     "canli": true,
     "hata_sayisi": 0,
     "kontrol_at": "2026-08-05T16:30:00.704379+00:00"
+  },
+  "https://microfon.co/scholarship?locationId=223": {
+    "canli": true,
+    "hata_sayisi": 0,
+    "kontrol_at": "2026-08-05T16:41:09.833258+00:00"
   }
 }
