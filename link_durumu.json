@@ -57,7 +57,7 @@
   "https://www.tev.org.tr/burslar": {
     "canli": true,
     "hata_sayisi": 0,
-    "kontrol_at": "2026-08-05T13:10:39.652811+00:00"
+    "kontrol_at": "2026-08-06T11:02:01.465959+00:00"
   },
   "https://ogrenciburs.org/turkiye-bilisim-dernegi-ulusal-bilimkurgu-oyku-yarismasi/": {
     "canli": true,
@@ -102,12 +102,12 @@
   "https://www.girisimcilikvakfi.org/yetenek-programlari": {
     "canli": true,
     "hata_sayisi": 0,
-    "kontrol_at": "2026-08-05T12:01:32.519277+00:00"
+    "kontrol_at": "2026-08-06T11:02:01.465959+00:00"
   },
   "https://www.girisimcilikvakfi.org/etki-programlari": {
     "canli": true,
     "hata_sayisi": 0,
-    "kontrol_at": "2026-08-05T12:01:32.519277+00:00"
+    "kontrol_at": "2026-08-06T11:02:01.465959+00:00"
   },
   "https://www.girisimcilikvakfi.org/genclik-programlari": {
     "canli": true,
@@ -243,5 +243,10 @@
     "canli": false,
     "hata_sayisi": 1,
     "kontrol_at": "2026-08-06T06:02:01.640977+00:00"
+  },
+  "argedestek@havelsan.com.tr": {
+    "canli": false,
+    "hata_sayisi": 1,
+    "kontrol_at": "2026-08-06T11:02:01.465959+00:00"
   }
 }
