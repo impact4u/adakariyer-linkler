@@ -238,5 +238,10 @@
     "canli": true,
     "hata_sayisi": 0,
     "kontrol_at": "2026-08-05T17:30:51.850354+00:00"
+  },
+  "www.grants.at": {
+    "canli": false,
+    "hata_sayisi": 1,
+    "kontrol_at": "2026-08-06T06:02:01.640977+00:00"
   }
 }
